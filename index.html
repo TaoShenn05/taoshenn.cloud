@@ -3,76 +3,94 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>taoshenn.cloud</title>
+  <title>Taoshenn.cloud</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg0: #0c1218;
-      --bg1: #142029;
-      --ink: #e8eef2;
-      --muted: #8a9aa8;
-      --accent: #3d9a8b;
+      --bg0: #0a0f14;
+      --bg1: #121a22;
+      --ink: #f2f5f7;
+      --muted: #8b9aa8;
+      --accent: #4aafa0;
+      --line: rgba(242, 245, 247, 0.12);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       min-height: 100vh;
-      font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      font-family: "Instrument Sans", "PingFang SC", "Microsoft YaHei", sans-serif;
       color: var(--ink);
       background:
-        radial-gradient(ellipse 80% 60% at 20% 10%, rgba(61, 154, 139, 0.18), transparent 55%),
-        radial-gradient(ellipse 70% 50% at 90% 80%, rgba(40, 80, 120, 0.25), transparent 50%),
-        linear-gradient(165deg, var(--bg0), var(--bg1));
+        radial-gradient(ellipse 90% 70% at 50% -10%, rgba(74, 175, 160, 0.16), transparent 55%),
+        radial-gradient(ellipse 60% 50% at 100% 100%, rgba(30, 60, 90, 0.35), transparent 50%),
+        linear-gradient(180deg, var(--bg0), var(--bg1));
       display: grid;
       place-items: center;
-      padding: 2rem;
+      padding: 2.5rem 1.5rem;
     }
 
     main {
-      max-width: 36rem;
+      max-width: 40rem;
       text-align: center;
     }
 
     .brand {
-      font-size: clamp(2.4rem, 8vw, 3.6rem);
-      font-weight: 650;
-      letter-spacing: -0.03em;
-      line-height: 1.1;
-      animation: rise 0.8s ease-out both;
+      font-size: clamp(2.75rem, 9vw, 4.25rem);
+      font-weight: 600;
+      letter-spacing: -0.04em;
+      line-height: 1.05;
+      animation: rise 0.9s ease-out both;
     }
 
     .brand span {
       color: var(--accent);
+      font-weight: 400;
+      letter-spacing: -0.02em;
     }
 
-    p {
-      margin-top: 1rem;
-      color: var(--muted);
-      font-size: 1.05rem;
-      line-height: 1.6;
-      animation: rise 0.8s ease-out 0.12s both;
-    }
-
-    .line {
-      width: 3rem;
-      height: 2px;
-      margin: 1.5rem auto 0;
+    .rule {
+      width: 2.5rem;
+      height: 1px;
+      margin: 1.75rem auto;
       background: var(--accent);
-      opacity: 0.7;
-      animation: rise 0.8s ease-out 0.2s both;
+      opacity: 0.85;
+      animation: rise 0.9s ease-out 0.1s both;
+    }
+
+    .contact {
+      animation: rise 0.9s ease-out 0.18s both;
+    }
+
+    .contact a {
+      color: var(--muted);
+      font-size: 1rem;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: color 0.25s ease, border-color 0.25s ease;
+    }
+
+    .contact a:hover {
+      color: var(--ink);
+      border-bottom-color: var(--line);
     }
 
     @keyframes rise {
-      from { opacity: 0; transform: translateY(12px); }
+      from { opacity: 0; transform: translateY(14px); }
       to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
   <main>
-    <h1 class="brand">taoshenn<span>.cloud</span></h1>
-    <p>个人站点 · 建设中</p>
-    <div class="line" aria-hidden="true"></div>
+    <h1 class="brand">Taoshenn<span>.cloud</span></h1>
+    <div class="rule" aria-hidden="true"></div>
+    <p class="contact">
+      <a href="mailto:501831625@qq.com">501831625@qq.com</a>
+    </p>
   </main>
 </body>
 </html>

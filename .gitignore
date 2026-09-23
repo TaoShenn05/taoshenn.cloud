@@ -1,0 +1,10 @@
+# SSL private material — never publish
+*.key
+*.pem
+*.crt
+*.csr
+*_nginx/
+.tools/
+.env
+.DS_Store
+Thumbs.db
