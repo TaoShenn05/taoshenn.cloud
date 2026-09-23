@@ -5,6 +5,7 @@
 *.csr
 *_nginx/
 .tools/
+.cursor/
 .env
 .DS_Store
 Thumbs.db
