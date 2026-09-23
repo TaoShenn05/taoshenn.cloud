@@ -264,6 +264,9 @@ const messages = [
   { text: "> 名称：", delay: 20 },
   { text: "Taoshenn", delay: 100, style: "color:#0ff;font-weight:bold" },
   { text: "\n", delay: 50 },
+  { text: "> 身份：", delay: 20 },
+  { text: "东北林业大学 · 大三在读", delay: 50, style: "color:#0ff" },
+  { text: "\n", delay: 50 },
   { text: "> 站点：", delay: 20 },
   { text: "taoshenn.cloud", delay: 50, style: "color:#0ff" },
   { text: "\n", delay: 50 },
@@ -271,7 +274,7 @@ const messages = [
   { text: "个人站点。后续将在此展示参赛项目，供评委审阅。", delay: 30, style: "color:#0ff" },
   { text: "\n", delay: 50 },
   { text: "> 状态：", delay: 20 },
-  { text: "在线 // 安全等级：DELTA", delay: 50, style: "color:#0f0" },
+  { text: "在线", delay: 50, style: "color:#0f0" },
   { text: "\n\n", delay: 100 },
   { text: "> 输入「帮助」查看可用命令", delay: 30, style: "color:#0f0" },
   { text: "\n", delay: 50 },
@@ -329,7 +332,9 @@ function processCommand(command) {
       "- <span style=\"color:#0ff\">退出</span>：尝试退出";
   } else if (cmd === "关于" || cmd === "about") {
     response.innerHTML =
-      "Taoshenn 的个人站点。<br>后续将在此挂载比赛项目，方便评委审阅与访问。";
+      "名称：Taoshenn<br>" +
+      "身份：东北林业大学大三在读学生<br>" +
+      "站点：个人主页，后续将挂载参赛项目供评委审阅。";
   } else if (cmd === "项目" || cmd === "projects") {
     response.innerHTML =
       "暂无公开项目。<br>比赛作品上线后，将在此列出入口与说明。";
