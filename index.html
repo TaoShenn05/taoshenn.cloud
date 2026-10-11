@@ -337,7 +337,9 @@ function processCommand(command) {
       "站点：个人主页，后续将挂载参赛项目供评委审阅。";
   } else if (cmd === "项目" || cmd === "projects") {
     response.innerHTML =
-      "暂无公开项目。<br>比赛作品上线后，将在此列出入口与说明。";
+      "【冰域】黑龙江冰雪文旅小程序<br>" +
+      '评委审阅页：<a href="/bingyu/" style="color:#0ff">https://taoshenn.cloud/bingyu/</a><br>' +
+      "内容：小程序使用录制（音频）";
   } else if (cmd === "联系" || cmd === "contact") {
     response.innerHTML =
       '邮箱：<a href="mailto:501831625@qq.com" style="color:#b19cd9">501831625@qq.com</a>';
