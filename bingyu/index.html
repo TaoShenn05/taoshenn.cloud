@@ -34,7 +34,7 @@
     }
 
     .wrap {
-      max-width: 40rem;
+      max-width: 48rem;
       margin: 0 auto;
     }
 
@@ -119,9 +119,12 @@
       margin-bottom: 1rem;
     }
 
-    audio {
+    video {
+      display: block;
       width: 100%;
-      height: 40px;
+      max-height: min(70vh, 28rem);
+      background: #000;
+      border-radius: 6px;
     }
 
     .note {
@@ -165,7 +168,7 @@
     <p class="eyebrow">评委审阅 · 使用录制</p>
     <h1>冰域 · 黑龙江冰雪文旅小程序</h1>
     <p class="lead">
-      面向黑龙江冰雪文化与旅游场景的微信小程序。本页提供操作使用录制音频，供评委在线审阅。
+      面向黑龙江冰雪文化与旅游场景的微信小程序。本页提供操作使用录制视频，供评委在线审阅。
     </p>
 
     <div class="meta">
@@ -175,15 +178,15 @@
     </div>
 
     <section class="section" aria-labelledby="demo-title">
-      <h2 id="demo-title">使用录制（音频）</h2>
+      <h2 id="demo-title">使用录制（视频）</h2>
       <div class="player">
-        <p>请播放下方录音，了解小程序主要流程与界面操作。</p>
-        <audio id="demo" controls preload="metadata" controlsList="nodownload">
-          <source src="./demo.mp3" type="audio/mpeg" />
-          您的浏览器不支持音频播放，请
-          <a href="./demo.mp3">下载 MP3</a>。
-        </audio>
-        <p class="note" id="audio-status">文件路径：<code>/bingyu/demo.mp3</code></p>
+        <p>请播放下方视频，了解小程序主要流程与界面操作。</p>
+        <video id="demo" controls playsinline preload="metadata" controlsList="nodownload">
+          <source src="./demo.mp4" type="video/mp4" />
+          您的浏览器不支持视频播放，请
+          <a href="./demo.mp4">下载 MP4</a>。
+        </video>
+        <p class="note" id="video-status">文件路径：<code>/bingyu/demo.mp4</code></p>
       </div>
     </section>
 
@@ -195,12 +198,12 @@
   </div>
 
   <script>
-    const audio = document.getElementById("demo");
-    const status = document.getElementById("audio-status");
-    audio.addEventListener("error", function () {
+    const video = document.getElementById("demo");
+    const status = document.getElementById("video-status");
+    video.addEventListener("error", function () {
       status.classList.add("warn");
       status.innerHTML =
-        "尚未找到音频文件。请将录制的 MP3 命名为 <code>demo.mp3</code>，放到本站 <code>bingyu/</code> 目录后重新上传。";
+        "尚未找到视频文件。请将录制命名为 <code>demo.mp4</code>，放到本站 <code>bingyu/</code> 目录后重新上传。";
     });
   </script>
 </body>
